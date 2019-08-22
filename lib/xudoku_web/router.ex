@@ -19,6 +19,7 @@ defmodule XudokuWeb.Router do
 
     get "/", PageController, :index
     live "/clock", ClockLive
+    live "/demo", DemoLive
   end
 
   # Other scopes may use custom stacks.
