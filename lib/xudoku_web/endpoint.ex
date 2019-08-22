@@ -1,7 +1,7 @@
-defmodule LiveViewDemoWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :live_view_demo
+defmodule XudokuWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :xudoku
 
-  socket "/socket", LiveViewDemoWeb.UserSocket,
+  socket "/socket", XudokuWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -13,7 +13,7 @@ defmodule LiveViewDemoWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :live_view_demo,
+    from: :xudoku,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -41,8 +41,8 @@ defmodule LiveViewDemoWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_live_view_demo_key",
+    key: "_xudoku_key",
     signing_salt: "pIQrFsE9"
 
-  plug LiveViewDemoWeb.Router
+  plug XudokuWeb.Router
 end
